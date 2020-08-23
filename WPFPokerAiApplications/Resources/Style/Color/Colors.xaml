@@ -28,6 +28,19 @@
         <GradientStop Color="#374159" Offset="0.85"/>
         <GradientStop Color="#282f40" Offset="0.15"/>
     </LinearGradientBrush>
+    <!--Наклонный градиент Черный-->
+    <LinearGradientBrush EndPoint="0.8,1" StartPoint="-0.5,1" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad" Opacity="1" x:Key="Defrag_RotateGradientBlack">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.05" CenterX="0.5" ScaleX="-1.35"/>
+                <SkewTransform AngleY="71" AngleX="56" CenterY="0.05" CenterX="0.5"/>
+                <RotateTransform Angle="17" CenterY="0.05" CenterX="0.5"/>
+                <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="#FF2C2F36" Offset="0.281"/>
+        <GradientStop Color="#FF0A0B0C" Offset="1"/>
+    </LinearGradientBrush>
 
 
 
