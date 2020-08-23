@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="Resorces\Style\Button\" />
-    <Folder Include="Resorces\Style\Color\" />
     <Folder Include="Data\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
