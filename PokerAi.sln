@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFPokerAiApplications", "WPFPokerAiApplications\WPFPokerAiApplications.csproj", "{C26AC34C-2949-49D1-8E02-45765B417F34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFPokerAiApplications", "WPFPokerAiApplications\WPFPokerAiApplications.csproj", "{C26AC34C-2949-49D1-8E02-45765B417F34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{55EBBA2D-5752-4990-8702-27832D8B5373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerAiConsole", "Test\PokerAiConsole\PokerAiConsole.csproj", "{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{C26AC34C-2949-49D1-8E02-45765B417F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C26AC34C-2949-49D1-8E02-45765B417F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C26AC34C-2949-49D1-8E02-45765B417F34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552} = {55EBBA2D-5752-4990-8702-27832D8B5373}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F1BA5B9-9ACC-4B02-A1CE-1302CFD5A349}
