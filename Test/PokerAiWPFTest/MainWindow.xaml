@@ -9,6 +9,10 @@
 
 
     <Grid >
+        <Button Name="btn5" Width="140" Height="40" >
+            <Image Source="Images\new\1.png"></Image>
+        </Button>
+        <Button Name="btn6" BorderBrush="Black">Click the picture.</Button>
 
 
 

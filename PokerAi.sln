@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFPokerAiApplications", "W
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{55EBBA2D-5752-4990-8702-27832D8B5373}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerAiConsole", "Test\PokerAiConsole\PokerAiConsole.csproj", "{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokerAiConsole", "Test\PokerAiConsole\PokerAiConsole.csproj", "{8ED2F4FC-AF2E-46CF-872F-ED3FAB2D4552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokerAiWPFTest", "Test\PokerAiWPFTest\PokerAiWPFTest.csproj", "{B7D4588C-65EE-465D-8ED4-8E703D890CEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokerAiWPFTest", "Test\PokerAiWPFTest\PokerAiWPFTest.csproj", "{B7D4588C-65EE-465D-8ED4-8E703D890CEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

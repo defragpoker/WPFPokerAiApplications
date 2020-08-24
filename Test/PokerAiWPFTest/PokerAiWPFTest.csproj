@@ -6,4 +6,21 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+    <Page Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images1\new\1.png" />
+    <None Remove="Images1\new\2.png" />
+    <None Remove="Images1\new\3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images1\new\" />
+  </ItemGroup>
+
 </Project>
