@@ -9,10 +9,15 @@
 
 
     <Grid >
-        <Button Name="btn5" Width="140" Height="40" >
-            <Image Source="Images\new\1.png"></Image>
+        <Button Margin="315,89,184,197" Width="140" Height="40">
+            <Grid>
+                <TextBlock> Button</TextBlock>
+                <Image Source="Pictures/1.png" Margin="-9,-2,-9,-2" />
+            </Grid>
+
         </Button>
-        <Button Name="btn6" BorderBrush="Black">Click the picture.</Button>
+
+
 
 
 
