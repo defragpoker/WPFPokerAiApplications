@@ -9,10 +9,13 @@
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="{StaticResource Defrag_RotateGradientBlack}"
+        Background="#1c1f21"
         MouseLeftButtonDown="Click_MainWindow">
     
+    
     <Grid>
-        
+        <Button Content="Target" Style="{StaticResource ButtonMainMenu}">
+            
+        </Button>
     </Grid>
 </Window>

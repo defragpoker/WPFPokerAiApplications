@@ -2,10 +2,100 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     >
 
-
-
+    <!--#region Стиль Кнопки Меню-->
+    <!--Темно Синий градиент-->
+    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="Defrag_GradientDarkBlue">
+        <GradientStop Offset="0" Color="#44576e"/>
+        <GradientStop Offset="0.4" Color="#4d6b8f"/>
+        <GradientStop Offset="1" Color="#5d7b9e"/>
+    </LinearGradientBrush>
+    <!--Светло Голубой градиент-->
+    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" x:Key="Defrag_GradientLightBlue">
+        <GradientStop Offset="0" Color="#5581a3"/>
+        <GradientStop Offset="0.1" Color="#629ecc"/>
+        <GradientStop Offset="1" Color="#5085ad"/>
+    </LinearGradientBrush>
+    <!--Наклонный градиент Темносиний-->
+    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad" x:Key="Defrag_RotateGradientDarkBlue">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                <SkewTransform AngleY="70" CenterY="0.6" CenterX="0.55" AngleX="70"/>
+                <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="#2a3942" Offset="0.26"/>
+        <GradientStop Color="#374159" Offset="0.85"/>
+        <GradientStop Color="#282f40" Offset="0.15"/>
+    </LinearGradientBrush>
+    <!--Наклонный градиент Черный-->
+    <LinearGradientBrush EndPoint="0.8,1" StartPoint="-0.5,1" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad" Opacity="1" x:Key="Defrag_RotateGradientBlack">
+        <LinearGradientBrush.RelativeTransform>
+            <TransformGroup>
+                <ScaleTransform CenterY="0.05" CenterX="0.5" ScaleX="-1.35"/>
+                <SkewTransform AngleY="71" AngleX="56" CenterY="0.05" CenterX="0.5"/>
+                <RotateTransform Angle="17" CenterY="0.05" CenterX="0.5"/>
+                <TranslateTransform X="0" Y="0"/>
+            </TransformGroup>
+        </LinearGradientBrush.RelativeTransform>
+        <GradientStop Color="#FF2C2F36" Offset="0.281"/>
+        <GradientStop Color="#FF0A0B0C" Offset="1"/>
+    </LinearGradientBrush>
     
+    <!--Цвет кнопки При наведении-->
+    <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#353d4a"/>
+    <SolidColorBrush x:Key="Button.MouseOvser.Foreground" Color="#14b5ff"/>
+    <!--Цвет кнопки При нажатии-->
+    <SolidColorBrush x:Key="Button.Pressed.Background" Color="#455061"/>
+    <SolidColorBrush x:Key="Button.Pressed.Foreground" Color="#14b5ff"/>
+    <!--Цвет кнопки При Блокировании-->
+    <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+    <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
 
+    <!--Стиль Кнопок Навигации-->
+    <Style x:Key="ButtonMainMenu" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="{StaticResource Defrag_RotateGradientDarkBlue}"/>
+        <Setter Property="Foreground" Value="{StaticResource Defrag_GradientLightBlue}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" 
+                                Background="{TemplateBinding Background}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                SnapsToDevicePixels="true">
+
+                        <ContentPresenter x:Name="contentPresenter" 
+                                              Focusable="False" 
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              Margin="{TemplateBinding Padding}" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Button.Pressed.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
 
 
 
