@@ -17,4 +17,8 @@
     <Folder Include="Images\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.0-ci1883" />
+  </ItemGroup>
+
 </Project>

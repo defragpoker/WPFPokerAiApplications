@@ -1,0 +1,12 @@
+﻿Картинки под Login             # Solid_UserCheck
+Картинки под Account Data      # Solid_Cloud
+Картинки под Player Data	   # Solid_UserTag
+Картинки под News			   # Solid_RssSquare
+Картинка для Tutorials         # Solid_UserGraduate
+Картинки для Table             # Solid_Tools
+Картинки под Exit			   # Solid_DoorOpen	
+
+
+
+
+					 

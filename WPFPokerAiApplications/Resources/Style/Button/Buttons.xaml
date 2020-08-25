@@ -4,20 +4,23 @@
                     
                     >
 
-    <!--#region Стиль Кнопки Меню-->
-    
+
+    <!--#region Цвета Объъектов-->
     <!--Цвет кнопки При наведении-->
     <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#242931 "/>
     <SolidColorBrush x:Key="Button.MouseOvser.Foreground" Color="#A4FF8E  "/>
     <!--Цвет кнопки При нажатии-->
     <SolidColorBrush x:Key="Button.Pressed.Background" Color="#303540 "/>
     <SolidColorBrush x:Key="Button.Pressed.Foreground" Color="#14b5ff"/>
-    <!--Цвет кнопки При Блокировании-->
-    <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-    <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-
-    <!--Стиль Кнопок Навигации-->
-    <Style x:Key="ButtonMainMenu" TargetType="Button">
+    <!--#endregion-->
+    
+    <!--#region Эффекты Объъектов-->
+    <!--Эффект отбрасывания тени -->
+    <DropShadowEffect x:Key="DropShadowDark" ShadowDepth="5" BlurRadius="10" Color="DarkSlateGray" Opacity="0.4"/>
+    <!--#endregion-->
+    
+    <!--#region Стиль Кнопка Login Главное Меню-->
+    <Style x:Key="LoginButton" TargetType="Button">
         <!--Свойства-->
         <Setter Property="Background" Value="#242931"/>
         <Setter Property="Foreground" Value="#838485"/>
@@ -25,38 +28,424 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
         <Setter Property="Height" Value="40"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontSize" Value="12"/>
-        
-        
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
         <!--Свойство Темплейт-->
         <Setter Property="Template">
             <Setter.Value>
+                
                 <ControlTemplate TargetType="{x:Type Button}">
-                    
                     <Border x:Name="border"
                             Background="{TemplateBinding Background}" 
                             BorderThickness="{TemplateBinding BorderThickness}" 
                             BorderBrush="{TemplateBinding BorderBrush}" 
                             SnapsToDevicePixels="true">
                         
-                            <ContentPresenter x:Name="contentPresenter" 
-                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                              Margin="{TemplateBinding Padding}"
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_UserCheck" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+                            
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
                                               Focusable="False" 
                                               RecognizesAccessKey="True" 
                                               SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
                            
                     </Border>
 
                     <ControlTemplate.Triggers>
+                        
                         <Trigger Property="IsMouseOver" Value="true">
+                            
                             <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
                         </Trigger>
+                        
                         <Trigger Property="IsPressed" Value="true">
+                            
                             <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                            
                         </Trigger>
+                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Стиль Кнопка Account Data Главное Меню-->
+    <Style x:Key="AccountDataButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_Cloud" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Стиль Кнопка Player Data Главное Меню-->
+    <Style x:Key="PlayerDataButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_UserTag" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Стиль Кнопка News Главное Меню-->
+    <Style x:Key="NewsButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_RssSquare" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Стиль Кнопка Tutorial Главное Меню-->
+    <Style x:Key="TutorialsButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_UserGraduate" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Стиль Кнопка Table Главное Меню-->
+    <Style x:Key="TableButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_Tools" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region Кнопка Exit Главное Меню-->
+    <Style x:Key="ExitButton" TargetType="Button">
+        <!--Свойства-->
+        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Foreground" Value="#838485"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
+        <!--Свойство Темплейт-->
+        <Setter Property="Template">
+            <Setter.Value>
+
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border"
+                            Background="{TemplateBinding Background}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            SnapsToDevicePixels="true">
+
+                        <DockPanel HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}" >
+                            <fa:ImageAwesome x:Name="Icon" Height="12" 
+                                             Icon="Solid_DoorOpen" 
+                                             Foreground="#838485" 
+                                             Margin="0,0,5,0"
+                                             Effect="{StaticResource DropShadowDark}"/>
+
+                            <ContentPresenter x:Name="contentPresenter"                                                                                                                                           
+                                              Focusable="False" 
+                                              RecognizesAccessKey="True" 
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </DockPanel>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+
+                        <Trigger Property="IsMouseOver" Value="true">
+
+                            <Setter Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+                            <Setter TargetName="Icon" Property="Foreground" Value="{StaticResource Button.MouseOvser.Foreground}"/>
+
+                        </Trigger>
+
+                        <Trigger Property="IsPressed" Value="true">
+
+                            <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+
+                        </Trigger>
+
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

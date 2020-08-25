@@ -15,7 +15,6 @@
     
     
     <Grid>
-        <Button Content="Login" Style="{StaticResource ButtonMainMenu}"/>
-
+        <Button Content="Exit" Style="{StaticResource ExitButton}" />
     </Grid>
 </Window>
