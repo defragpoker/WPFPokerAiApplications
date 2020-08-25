@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFPokerAiApplications"
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1700" 
         WindowStartupLocation="CenterScreen"
@@ -14,8 +15,7 @@
     
     
     <Grid>
-        <Button Content="Target" Style="{StaticResource ButtonMainMenu}">
-            
-        </Button>
+        <Button Content="Login" Style="{StaticResource ButtonMainMenu}"/>
+
     </Grid>
 </Window>

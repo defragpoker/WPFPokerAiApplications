@@ -17,5 +17,7 @@ namespace WPFPokerAiApplications
         {
             this.DragMove(); // Метод перерисовки
         }
+
+
     }
 }
