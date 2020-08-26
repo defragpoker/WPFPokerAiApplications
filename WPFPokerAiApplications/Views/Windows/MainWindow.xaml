@@ -9,11 +9,18 @@
         Title="MainWindow" Height="720" Width="1700" 
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
-        ResizeMode="NoResize"
-        Background="#1c1f21"
+        ResizeMode="NoResize"       
         MouseLeftButtonDown="Click_MainWindow">
-    
-    
+    <Window.Background>
+        <!-- Это путь к Бекграунду Главного Окна-->
+        <ImageBrush ImageSource="\Resources\Image\Backgrounds\Windows\MainWindowBackground.png"/>
+    </Window.Background>
+
+
+
+
+
+
     <Grid>
         <Button Content="Exit" Style="{StaticResource ExitButton}" />
     </Grid>
