@@ -4,13 +4,15 @@
                     
                     >
 
+    
+
 
     <!--#region Цвета Объъектов-->
     <!--Цвет кнопки При наведении-->
     <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#242931 "/>
     <SolidColorBrush x:Key="Button.MouseOvser.Foreground" Color="#A4FF8E  "/>
     <!--Цвет кнопки При нажатии-->
-    <SolidColorBrush x:Key="Button.Pressed.Background" Color="#303540 "/>
+    <SolidColorBrush x:Key="Button.Pressed.Background" Color="#252326 "/>
     <SolidColorBrush x:Key="Button.Pressed.Foreground" Color="#14b5ff"/>
     <!--#endregion-->
     
@@ -27,7 +29,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -89,7 +91,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -151,7 +153,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -213,7 +215,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -275,7 +277,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -337,7 +339,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>
@@ -399,7 +401,7 @@
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="140"/>
-        <Setter Property="Height" Value="44"/>
+        <Setter Property="Height" Value="45"/>
         <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="FontSize" Value="13"/>
         <Setter Property="Effect" Value="{StaticResource DropShadowDark}"/>

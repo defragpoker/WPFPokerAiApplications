@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Image\Backgrounds\Button\Login Button Mouse Click.png" />
+    <None Remove="Resources\Image\Backgrounds\Button\Login Button MouseOver.png" />
+    <None Remove="Resources\Image\Backgrounds\Button\Login Button Static.png" />
     <None Remove="Resources\Image\Backgrounds\Windows\MainWindowBackground.png" />
   </ItemGroup>
 
@@ -27,6 +30,9 @@
 
   
   <ItemGroup>
+    <Resource Include="Resources\Image\Backgrounds\Button\Login Button Mouse Click.png" />
+    <Resource Include="Resources\Image\Backgrounds\Button\Login Button MouseOver.png" />
+    <Resource Include="Resources\Image\Backgrounds\Button\Login Button Static.png" />
     <Resource Include="Resources\Image\Backgrounds\Windows\MainWindowBackground.png" />
   </ItemGroup>
 

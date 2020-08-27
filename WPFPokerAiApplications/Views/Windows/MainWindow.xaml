@@ -19,10 +19,9 @@
 
 
 
-
-
     <Grid>
-        <Grid Margin="-5,30,1545,30" >
+        <!--Кнопки Главного Меню-->
+        <Grid Margin="-8,31,1548,29" >
             <Grid.RowDefinitions>
 
                 <RowDefinition Height="47"/>
@@ -45,7 +44,7 @@
             <Button Content="Account Data" Style="{StaticResource AccountDataButton}" Grid.Row="1" />
             <Button Content="Player Data" Style="{StaticResource PlayerDataButton}" Grid.Row="2" />
             <Button Content="News" Style="{StaticResource NewsButton}" Grid.Row="3" />
-            <Button Content="Tutorials" Style="{StaticResource TableButton}" Grid.Row="4" />
+            <Button Content="Tutorials" Style="{StaticResource TutorialsButton}" Grid.Row="4" />
             <Button Content="Table # 1" Style="{StaticResource TableButton}" Grid.Row="5" />
             <Button Content="Table # 2" Style="{StaticResource TableButton}" Grid.Row="6" />
             <Button Content="Table # 3" Style="{StaticResource TableButton}" Grid.Row="7" />
@@ -56,6 +55,10 @@
             <Button Content="Table # 8" Style="{StaticResource TableButton}" Grid.Row="12" />
             <Button Content="Exit" Style="{StaticResource ExitButton}" Grid.Row="13" />
 
+        </Grid>
+        <!--Область переключения страниц-->
+        <Grid Margin="152,31,0,29">
+            
         </Grid>
     </Grid>
 </Window>
