@@ -24,7 +24,7 @@
     <!--#region Стиль Кнопка Login Главное Меню-->
     <Style x:Key="LoginButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -86,7 +86,7 @@
     <!--#region Стиль Кнопка Account Data Главное Меню-->
     <Style x:Key="AccountDataButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -148,7 +148,7 @@
     <!--#region Стиль Кнопка Player Data Главное Меню-->
     <Style x:Key="PlayerDataButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -210,7 +210,7 @@
     <!--#region Стиль Кнопка News Главное Меню-->
     <Style x:Key="NewsButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -272,7 +272,7 @@
     <!--#region Стиль Кнопка Tutorial Главное Меню-->
     <Style x:Key="TutorialsButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -334,7 +334,7 @@
     <!--#region Стиль Кнопка Table Главное Меню-->
     <Style x:Key="TableButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -396,7 +396,7 @@
     <!--#region Кнопка Exit Главное Меню-->
     <Style x:Key="ExitButton" TargetType="Button">
         <!--Свойства-->
-        <Setter Property="Background" Value="#242931"/>
+        <Setter Property="Background" Value="#1E2020"/>
         <Setter Property="Foreground" Value="#838485"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="FontWeight" Value="Bold"/>
