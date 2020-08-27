@@ -40,25 +40,23 @@
                 <RowDefinition Height="47"/>
 
             </Grid.RowDefinitions>
-            <Button Content="Login" Style="{StaticResource LoginButton}" Grid.Row="0"/>
-            <Button Content="Account Data" Style="{StaticResource AccountDataButton}" Grid.Row="1" />
-            <Button Content="Player Data" Style="{StaticResource PlayerDataButton}" Grid.Row="2" />
-            <Button Content="News" Style="{StaticResource NewsButton}" Grid.Row="3" />
-            <Button Content="Tutorials" Style="{StaticResource TutorialsButton}" Grid.Row="4" />
-            <Button Content="Table # 1" Style="{StaticResource TableButton}" Grid.Row="5" />
-            <Button Content="Table # 2" Style="{StaticResource TableButton}" Grid.Row="6" />
-            <Button Content="Table # 3" Style="{StaticResource TableButton}" Grid.Row="7" />
-            <Button Content="Table # 4" Style="{StaticResource TableButton}" Grid.Row="8" />
-            <Button Content="Table # 5" Style="{StaticResource TableButton}" Grid.Row="9" />
-            <Button Content="Table # 6" Style="{StaticResource TableButton}" Grid.Row="10" />
-            <Button Content="Table # 7" Style="{StaticResource TableButton}" Grid.Row="11" />
-            <Button Content="Table # 8" Style="{StaticResource TableButton}" Grid.Row="12" />
-            <Button Content="Exit" Style="{StaticResource ExitButton}" Grid.Row="13" />
+            <Button Content="Login" Style="{StaticResource LoginButton}" Grid.Row="0" Click="Login_Click"/>
+            <Button Content="Account Data" Style="{StaticResource AccountDataButton}" Grid.Row="1" Click="AccountData_Click"  />
+            <Button Content="Player Data" Style="{StaticResource PlayerDataButton}" Grid.Row="2" Click="PlayerData_Click"  />
+            <Button Content="News" Style="{StaticResource NewsButton}" Grid.Row="3" Click="News_Click" />
+            <Button Content="Tutorials" Style="{StaticResource TutorialsButton}" Grid.Row="4" Click="Tutorials_Click" />
+            <Button Content="Table # 1" Style="{StaticResource TableButton}" Grid.Row="5" Click="Table1_Click"  />
+            <Button Content="Table # 2" Style="{StaticResource TableButton}" Grid.Row="6" Click="Table2_Click"/>
+            <Button Content="Table # 3" Style="{StaticResource TableButton}" Grid.Row="7" Click="Table3_Click" />
+            <Button Content="Table # 4" Style="{StaticResource TableButton}" Grid.Row="8" Click="Table4_Click" />
+            <Button Content="Table # 5" Style="{StaticResource TableButton}" Grid.Row="9" Click="Table5_Click" />
+            <Button Content="Table # 6" Style="{StaticResource TableButton}" Grid.Row="10" Click="Table6_Click"  />
+            <Button Content="Table # 7" Style="{StaticResource TableButton}" Grid.Row="11" Click="Table7_Click" />
+            <Button Content="Table # 8" Style="{StaticResource TableButton}" Grid.Row="12" Click="Table8_Click"/>
+            <Button Content="Exit" Style="{StaticResource ExitButton}" Grid.Row="13" Click="Button_Exit_Click" />
+        </Grid>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Pages/LoginPage.xaml" Margin="145,32,5,32"/>
 
-        </Grid>
-        <!--Область переключения страниц-->
-        <Grid Margin="152,31,0,29">
-            
-        </Grid>
+
     </Grid>
 </Window>
