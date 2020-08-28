@@ -55,7 +55,7 @@
             <Button Content="Table # 8" Style="{StaticResource TableButton}" Grid.Row="12" Click="Table8_Click"/>
             <Button Content="Exit" Style="{StaticResource ExitButton}" Grid.Row="13" Click="Button_Exit_Click" />
         </Grid>
-        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="Pages/LoginPage.xaml" Margin="145,32,5,32"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="/Views/Windows/Pages/LoginPage.xaml" Margin="145,32,5,32"/>
 
 
     </Grid>

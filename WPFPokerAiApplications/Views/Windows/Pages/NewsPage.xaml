@@ -9,10 +9,7 @@
       Title="NewsPage">
 
     <Grid>
-        <Grid.Background>
-            <SolidColorBrush Color="#FF32403C" Opacity="0.2"/>
-        </Grid.Background>
-        <Label Content="News" HorizontalAlignment="Left" Margin="654,268,0,0" VerticalAlignment="Top" Height="108" Width="402"/>
+        
 
     </Grid>
 </Page>
